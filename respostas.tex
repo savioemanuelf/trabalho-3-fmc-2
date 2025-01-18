@@ -3,6 +3,7 @@
 \usepackage{graphicx} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
 \title{Lista 3 Fundamentos Matemáticos da Computação II - Respostas}
 
@@ -30,7 +31,18 @@ Dessa forma, a alternativa correta é a letra \textbf{B}
 
 
 \subsection{Questão M2}
-% SUA RESPOSTA DA M2
+Dada a estrutura $(\mathbb{Z}, \ast)$, onde $\ast$ é definida por $a \ast b = a - b$, analisamos as propriedades:\\
+\textbf{Fechamento:}  
+A operação é fechada, pois $a - b \in \mathbb{Z}$ para quaisquer $a, b \in \mathbb{Z}$.\\
+\textbf{Associatividade:}  
+Não é associativa, pois $(a \ast b) \ast c = a - b - c \neq a - b + c = a \ast (b \ast c)$.\\
+\textbf{Elemento neutro:}  
+O elemento neutro é $0$, pois $a \ast 0 = a$.\\
+\textbf{Inversos:}  
+Não existem inversos distintos, pois $a \ast b = 0 \implies b = a$.\\
+
+Portanto, a alternativa correta é \textbf{B}.
+
 \subsection{Questão M3}
 % SUA RESPOSTA DA M3
 \subsection{Questão M4}
@@ -48,7 +60,44 @@ Logo, a operação é comutativa e alternativa correta é a letra \textbf{D}.
 \section{Seção Discursiva}
 
 \subsection{Questão D1}
-% SUA RESPOSTA DA D1
+Considere a estrutura algébrica $(M_2(\mathbb{Z}), \cdot)$, onde $M_2(\mathbb{Z})$ é o conjunto das matrizes $2 \times 2$ com entradas inteiras e $(\cdot)$ é o produto usual de matrizes.
+
+\begin{enumerate}
+    \item[\textbf{A.}] \textbf{A operação do produto de matrizes satisfaz a condição de fechamento? Explique.}
+
+    Sim, a operação de produto de matrizes em $M_2(\mathbb{Z})$ satisfaz a condição de fechamento. Dado que o produto usual de duas matrizes $2 \times 2$ com entradas inteiras resulta em outra matriz $2 \times 2$ com entradas inteiras, concluímos que o resultado pertence ao conjunto $M_2(\mathbb{Z})$.
+
+    \item[\textbf{B.}] \textbf{A operação do produto de matrizes é associativa? Explique.}
+
+    Sim, a operação de produto de matrizes é associativa. Para quaisquer matrizes $A, B, C \in M_2(\mathbb{Z})$, temos:
+    \[
+    A \cdot (B \cdot C) = (A \cdot B) \cdot C.
+    \]
+    Essa propriedade é válida para o produto usual de matrizes.
+
+    \item[\textbf{C.}] \textbf{Verifique a existência de elemento neutro. Em caso afirmativo, especifique o elemento neutro.}
+
+    Sim, existe um elemento neutro na operação de produto de matrizes. Esse elemento é a matriz identidade $I$, dada por:
+    \[
+    I = \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+    \end{bmatrix}.
+    \]
+    Para qualquer matriz $A \in M_2(\mathbb{Z})$, temos:
+    \[
+    A \cdot I = I \cdot A = A.
+    \]
+
+    \item[\textbf{D.}] \textbf{Verifique a condição de existência de simétricos/inversos.}
+
+    Nem todas as matrizes $2 \times 2$ com entradas inteiras possuem inverso em $M_2(\mathbb{Z})$. Uma matriz $A \in M_2(\mathbb{Z})$ é inversível se, e somente se, seu determinante $\det(A)$ for igual a $\pm 1$. Caso contrário, não existe matriz inversa em $M_2(\mathbb{Z})$.
+
+    \item[\textbf{E.}] \textbf{Essa estrutura se enquadra na definição de grupos? Explique.}
+
+    Não, a estrutura $(M_2(\mathbb{Z}), \cdot)$ não se enquadra na definição de grupo. Apesar de satisfazer as propriedades de fechamento, associatividade e possuir um elemento neutro, nem todos os elementos de $M_2(\mathbb{Z})$ possuem inverso, o que impede que a estrutura seja um grupo.
+
+\end{enumerate}
 \subsection{Questão D2}
 % SUA RESPOSTA DA D2
 
