@@ -118,7 +118,71 @@ Considere a estrutura algébrica $(M_2(\mathbb{Z}), \cdot)$, onde $M_2(\mathbb{Z
 
 \end{enumerate}
 \subsection{Questão D2}
-% SUA RESPOSTA DA D2
+Considere a estrutura algébrica $(\mathbb{R}^+, \ast)$ com a operação binária definida como $a \ast b = |a - b|$
+
+\begin{enumerate}
+    \item[\textbf{A.}] \textbf{Verifique se essa operação satisfaz a condição de fechamento.Explique.}
+    Para a operação \( a \ast b = |a - b| \), observe que:
+    \[
+    a \in \mathbb{R}^+, \, b \in \mathbb{R}^+ \implies a - b \in \mathbb{R} \quad \text{e} \quad |a - b| \in \mathbb{R}^+ \cup \{0\}.
+    \]
+    Portanto, a operação \( \ast \) satisfaz a condição de fechamento sobre \( \mathbb{R}^+ \), pois o resultado \( |a - b| \) será um número real não negativo.
+    
+    \item[\textbf{B.}] \textbf{A operação possui elemento neutro? Explique com base na definição de elemento neutro e em caso positivo, descreva quem é o elemento neutro.}
+
+    Para verificar a existência de um elemento neutro \( e \in \mathbb{R}^+ \), precisamos que:
+    \[
+    a \ast e = |a - e| = a, \quad \forall a \in \mathbb{R}^+.
+    \]
+    Temos que:
+    \[
+    a - e = a \implies e = 0.
+    \]
+
+    Então como \( e \in \mathbb{R}^+ \), portanto, existe um elemento neutro para esta operação.
+    \item[\textbf{C.}] \textbf{Verifique a existência de simétricos/inversos.}
+    Para que exista um simétrico \( b \in \mathbb{R}^+ \) de \( a \), precisamos que:
+    \[
+    a \ast b = |a - b| = e, \quad \text{onde } e = 0.
+    \]
+    Resolvendo \( |a - b| = 0 \):
+    \[
+    a - b = 0 \implies b = a.
+    \]
+    Portanto, o único simétrico de \( a \) é o próprio \( a \).
+    \item[\textbf{D.}] \textbf{Essa operação é associativa e comutativa? Explique usando a definição de associatividade e comutatividade.}
+    
+    \textbf{Comutatividade:} Verificamos se:
+    \[
+    a \ast b = b \ast a.
+    \]
+    Sabemos que:
+    \[
+    a \ast b = |a - b| \quad \text{e} \quad b \ast a = |b - a| = |a - b|.
+    \]
+    Portanto, \( a \ast b = b \ast a \), e a operação é comutativa.
+
+    \textbf{Associatividade:} Verificamos se:
+    \[
+    (a \ast b) \ast c = a \ast (b \ast c).
+    \]
+    Calculando cada lado:
+    \[
+    a \ast b = |a - b|, \quad (a \ast b) \ast c = ||a - b| - c|,
+    \]
+    \[
+    b \ast c = |b - c|, \quad a \ast (b \ast c) = |a - |b - c||.
+    \]
+    Por trivialidade, \( ||a - b| - c| \neq |a - |b - c|| \). Logo, a operação \( \ast \) não é associativa.
+    \item[\textbf{E.}] \textbf{Essa estrutura pode ser considerada um grupo? Explique.}
+    Para que a estrutura \( (\mathbb{R}^+, \ast) \) seja um grupo, as seguintes condições devem ser satisfeitas:
+    \begin{itemize}
+        \item Fechamento: Satisfeito, pois \( |a - b| \in \mathbb{R}^+ \).
+        \item Elemento neutro: Existe, e é \( e = 0 \).
+        \item Simétricos: Cada elemento \( a \in \mathbb{R}^+ \) é o seu próprio inverso.
+        \item Associatividade: Não satisfeito, pois \( \ast \) não é associativa.
+    \end{itemize}
+    Portanto, a estrutura \( (\mathbb{R}^+, \ast) \) não pode ser considerada um grupo devido a falta de Associatividade.
 
 
 \end{document}
